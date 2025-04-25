@@ -1,17 +1,21 @@
+package gestionbibliotheque.models;
+
+
 
 public class Livre extends Document {
-    private String auteur;
-    private int nombrePages;
-    private boolean disponible;
+    private final String auteur;
+    private final int nombrePages;
 
-    public Livre(int id, String titre, int anneePublication, String auteur, int nombrePages) {
-        super(id, titre, anneePublication);
+
+    public Livre(String titre, int anneePublication, String auteur, int nombrePages) {
+        super(titre, anneePublication);
         this.auteur = auteur;
         this.nombrePages = nombrePages;
-        this.disponible = true;
+
     }
 
 
+    @Override
     public void afficherDetails() {
         System.out.println(" Livre:");
         System.out.println("ID: " + id);
@@ -19,27 +23,8 @@ public class Livre extends Document {
         System.out.println("Année: " + anneePublication);
         System.out.println("Auteur: " + auteur);
         System.out.println("Pages: " + nombrePages);
-        System.out.println("Disponibilité: " + (disponible ? "Disponible" : "Emprunté"));
-    }
 
-    
-    public void emprunter() {
-        if (disponible) {
-            disponible = false;
-            System.out.println(" Livre emprunté : " + titre);
-        } else {
-            System.out.println("Ce livre est déjà emprunté.");
-        }
-    }
-
-   
-    public void retourner() {
-        disponible = true;
-        System.out.println("Livre retourné : " + titre);
     }
 
  
-    public boolean estDisponible() {
-        return disponible;
-    }
 }
