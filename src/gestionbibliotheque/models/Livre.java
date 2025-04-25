@@ -4,10 +4,12 @@
  */
 package gestionbibliotheque.models;
 
+import gestionbibliotheque.interfaces.Document;
+
 /**
  *
  * @author chika
  */
-public class Livre {
+public class Livre extends Document {
     
 }
