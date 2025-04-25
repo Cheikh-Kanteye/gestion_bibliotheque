@@ -1,15 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package gestionbibliotheque.models;
 
-/**
- *
- * @author chika
- */
-abstract class Document {
-    
+public abstract class Document {
+    protected int id;
+    protected String titre;
+    protected int anneePublication;
+
+    public Document(int id, String titre, int anneePublication) {
+        this.id = id;
+        this.titre = titre;
+        this.anneePublication = anneePublication;
+    }
+
+    public abstract void afficherDetails();
 }
+
+
+
+
+
+
+
+
 
 
