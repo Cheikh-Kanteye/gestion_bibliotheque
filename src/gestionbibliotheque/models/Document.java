@@ -8,6 +8,8 @@ package gestionbibliotheque.models;
  *
  * @author chika
  */
-public class Document {
+abstract class Document {
     
 }
+
+

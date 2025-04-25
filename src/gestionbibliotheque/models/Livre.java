@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package gestionbibliotheque.models;
-
 /**
  *
  * @author chika
  */
-public class Livre {
+public class Livre extends Document {
     
 }
