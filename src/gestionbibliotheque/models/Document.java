@@ -1,3 +1,4 @@
+
 package gestionbibliotheque.models;
 
 public abstract class Document {
@@ -13,6 +14,11 @@ public abstract class Document {
 
     public abstract void afficherDetails();
 }
+
+
+
+
+
 
 
 

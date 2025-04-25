@@ -1,7 +1,4 @@
 
-package gestionbibliotheque.models;
-
-
 public class Livre extends Document {
     private String auteur;
     private int nombrePages;
