@@ -4,6 +4,7 @@
  */
 package gestionbibliotheque.models;
 
+import gestionbibliotheque.interfaces.Empruntable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +26,19 @@ public class User {
         this.prenom = prenom;
         this.nom = nom;
         this.emprunts = new ArrayList<>();
+    }
+    
+    
+    public boolean retournerDocument(Document document){
+        if(document instanceof Empruntable){
+            Empruntable empruntable = (Empruntable) document;
+            if(emprunts.contains(document) && empruntable.retourner()){
+                emprunts.remove(document);
+                return true;
+            }
+        }
+        
+        return false;
     }
     
     

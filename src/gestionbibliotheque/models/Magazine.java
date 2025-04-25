@@ -9,5 +9,8 @@ package gestionbibliotheque.models;
  * @author chika
  */
 public class Magazine {
+
+    public Magazine(String titre, int anneePublication, int numero) {
+    }
     
 }

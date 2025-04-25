@@ -11,5 +11,5 @@ package gestionbibliotheque.interfaces;
 public interface Empruntable {
     void emprunter();
     boolean retourner();
-    void afficherDetail();
+    void estDisponible();
 }
