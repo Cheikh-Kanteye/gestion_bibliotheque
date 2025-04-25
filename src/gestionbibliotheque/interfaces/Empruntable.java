@@ -9,5 +9,7 @@ package gestionbibliotheque.interfaces;
  * @author chika
  */
 public interface Empruntable {
-    
+    void emprunter();
+    boolean retourner();
+    void afficherDetail();
 }
