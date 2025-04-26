@@ -1,8 +1,7 @@
 package gestionbibliotheque.models;
-
 import gestionbibliotheque.interfaces.Empruntable;
 
-abstract class Document implements Empruntable {
+public abstract class Document implements Empruntable {
 
     protected int id;
     protected String titre;
@@ -26,7 +25,27 @@ abstract class Document implements Empruntable {
     }
 
     public abstract void afficherDetails();
+    
+    public int getId(){
+        return id;
+    }
+    
+    public String getTitre() {
+        return titre;
+    }
 
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public int getAnneePublication() {
+        return anneePublication;
+    }
+
+    public void setAnneePublication(int anneePublication) {
+        this.anneePublication = anneePublication;
+    }
+    
     @Override
     public boolean emprunter(int utilisateurId) {
         if (disponible) {
