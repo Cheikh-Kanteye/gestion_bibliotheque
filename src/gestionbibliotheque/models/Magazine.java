@@ -5,7 +5,7 @@ public class Magazine extends Document {
     private int numero;
 
 
-    public Magazine(int id, String titre, int anneePublication, int numero) {
+    public Magazine(String titre, int anneePublication, int numero) {
         super(titre, anneePublication);
         this.numero = numero;
 
