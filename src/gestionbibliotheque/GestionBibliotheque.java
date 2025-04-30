@@ -4,6 +4,9 @@
  */
 package gestionbibliotheque;
 
+import gestionbibliotheque.services.Bibliotheque;
+import gestionbibliotheque.services.BibliothequeConsole;
+
 /**
  *
  * @author chika
@@ -15,6 +18,12 @@ public class GestionBibliotheque {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Bibliotheque bibliotheque = new Bibliotheque();
+        BibliothequeConsole bibliothequeConsole = new BibliothequeConsole(bibliotheque);
+        
+        //Traiter les choix
+        bibliothequeConsole.traiterChoix();
+        
     }
     
 }
